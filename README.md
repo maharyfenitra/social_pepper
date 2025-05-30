@@ -33,11 +33,11 @@ L’objectif est de fournir une interface professionnelle, responsive et intuiti
   - Mon Compte
   - Support Réseau
 - 🎨 Base de charte graphique professionnelle responsive (MUI)
-- 🔎 **NOUVEAU : Détail d’une newsletter**
+- 🔎 **NOUVEAU : Filtre titre + contenu && Détail d’une newsletter**
   - Affichage de la newsletter complète au clic sur une ligne
   - Informations complètes sur l’auteur (nom, email…)
 - ➕ Bonus :
-  - 🔔 Notifications simulées (console et UI)
+  - 🔔 Notifications simulées (Modal)
   - 🎯 Filtrage dynamique des newsletters par type (ex. : Actualités, En bref)
 
 ---
