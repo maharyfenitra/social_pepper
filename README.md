@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# 🧩 Partie 1 – Intégration front des contenus "Pepper" dans un Back Office React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Objectif
 
-Currently, two official plugins are available:
+Ce projet simule l’intégration des contenus d’un site WordPress externe dans un back-office React.  
+L’objectif est de fournir une interface professionnelle, responsive et intuitive pour consulter des newsletters.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Stack utilisée
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🧱 Framework : [React 19](https://react.dev)
+- ⚡️ Bundler : [Vite](https://vitejs.dev)
+- 💄 UI : [MUI (Material UI + Joy UI)](https://mui.com)
+- 🌐 Routing : [React Router DOM v7](https://reactrouter.com)
+- 📦 Gestion de paquets : [pnpm](https://pnpm.io)
+- 🔧 API Fetch : [Axios](https://axios-http.com)
+- 🧠 State + Caching : [TanStack React Query](https://tanstack.com/query)
+- 📊 Bonus : [Recharts](https://recharts.org/) pour d’éventuelles représentations graphiques
+- ✅ Linting : ESLint
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Fonctionnalités
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 📥 Récupération simulée de contenus WordPress via une fausse API (`jsonplaceholder.typicode.com`)
+- 🗂 Affichage des newsletters dans un tableau avec :
+  - Titre
+  - Date de publication
+  - Auteur
+- 🧭 Navigation via React Router :
+  - Accueil
+  - Mon Compte
+  - Support Réseau
+- 🎨 Base de charte graphique professionnelle responsive (MUI)
+- 🔎 **NOUVEAU : Détail d’une newsletter**
+  - Affichage de la newsletter complète au clic sur une ligne
+  - Informations complètes sur l’auteur (nom, email…)
+- ➕ Bonus :
+  - 🔔 Notifications simulées (console et UI)
+  - 🎯 Filtrage dynamique des newsletters par type (ex. : Actualités, En bref)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## ▶️ Lancer le projet localement
+
+### Prérequis
+- Node.js ≥ 18
+- [pnpm](https://pnpm.io) installé globalement : `npm install -g pnpm`
+
+### Étapes
+
+```bash
+pnpm install
+pnpm dev
